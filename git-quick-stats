@@ -75,19 +75,19 @@ function detailedGitStats() {
       printf "%s", author
 
       if( more["total"] > 0 ) {
-        printf ",%d (%.0f%%)", more[author], (more[author] / more["total"] * 100)
+        printf ",%d", more[author], (more[author] / more["total"] * 100)
       }
 
       if( less["total"] > 0 ) {
-        printf ",%d (%.0f%%)", less[author], (less[author] / less["total"] * 100)
+        printf ",%d", less[author], (less[author] / less["total"] * 100)
       }
 
       if( file["total"] > 0 ) {
-        printf ",%d (%.0f%%)", file[author], (file[author] / file["total"] * 100)
+        printf ",%d", file[author], (file[author] / file["total"] * 100)
       }
 
       if(commits["total"] > 0) {
-      	printf ",%d (%.0f%%)", commits[author], (commits[author] / commits["total"] * 100)
+      	printf ",%d", commits[author], (commits[author] / commits["total"] * 100)
       }
 
       if ( first[author] != "" ) {
@@ -128,7 +128,7 @@ function detailedGitStats() {
           printStats(author)
         }
       }
-      printStats("total")
+      # printStats("total")
     }'
 }
 
